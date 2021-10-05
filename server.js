@@ -1,60 +1,56 @@
-require('dotenv').config()
+// =======================
+//     DEPENDENCIES
+// =======================
 
-//___________________
-//Dependencies
-//___________________
+// -- config
+require('dotenv').config();
+
+// -- packages
 const express = require('express');
-const methodOverride = require('method-override');
-const mongoose = require ('mongoose');
+const mongoose = require('mongoose');
 const app = express();
-const db = mongoose.connection;
-//___________________
-//Port
-//___________________
-// Allow use of Heroku's port or your own local port, depending on the environment
-const PORT = process.env.PORT || 3000;
-
-//___________________
-//Database
-//___________________
-// How to connect to the database either via heroku or locally
-const MONGODB_URI = process.env.MONGODB_URI;
-
-// Connect to Mongo &
-// Fix Depreciation Warnings from Mongoose
-// May or may not need these depending on your Mongoose version
-mongoose.connect(MONGODB_URI , { useNewUrlParser: true, useUnifiedTopology: true }
-);
-
-// Error / success
-db.on('error', (err) => console.log(err.message + ' is mongod not running?'));
-db.on('connected', () => console.log('mongod connected: ', MONGODB_URI));
-db.on('disconnected', () => console.log('mongod disconnected'));
-
-//___________________
-//Middleware
-//___________________
-
-//use public folder for static assets
-app.use(express.static('public'));
-
-// populates req.body with parsed info from forms - if no data from forms will return an empty object {}
-app.use(express.urlencoded({ extended: false }));// extended: false - does not allow nested objects in query strings
-app.use(express.json());// returns middleware that only parses JSON - may or may not need it depending on your project
-
-//use method override
-app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
+const methodOverride = require('method-override');
 
 
-//___________________
-// Routes
-//___________________
-//localhost:3000
-app.get('/' , (req, res) => {
-  res.send('Hello World!');
+// =======================
+//     MIDDLEWARE
+// =======================
+
+// Body parser middleware: give us acces to req.body
+app.use(express.urlencoded({ extended: true }));
+app.use(methodOverride('_method'));
+
+// static files
+app.use(express.static('public'))
+
+// =======================
+//    CONTROLLERS
+// =======================
+const menuController = require('./controllers/menu');
+app.use('/menu', menuController);
+
+// =======================
+//     DATABASE
+// =======================
+
+// Database Connection
+mongoose.connect(process.env.DATABASE_URL, {
+	useNewUrlParser: true,
+	useUnifiedTopology: true
 });
 
-//___________________
-//Listener
-//___________________
-app.listen(PORT, () => console.log('express is listening on:', PORT));
+
+// Database Connection Error/Success
+// Define callback functions for various events
+const db = mongoose.connection
+db.on('error', (err) => console.log(err.message + ' is mongo not running?'));
+db.on('connected', () => console.log('mongo connected'));
+db.on('disconnected', () => console.log('mongo disconnected'));
+
+// =======================
+//       LISTENER
+// =======================
+const PORT = process.env.PORT;
+app.listen(PORT, () => {
+    console.log(`This server works on port: ${PORT}`)
+});
