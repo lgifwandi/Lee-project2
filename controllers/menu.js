@@ -8,14 +8,14 @@ const menu = require('../models/menu');
 // =======================
 //    SEED
 // =======================
-// const menuSeed = require('../models/menuSeed');
-// menuRouter.get('/seed', (req, res) => {
-//     menu.deleteMany({}, (error, allmenu) => {});
+const menuSeed = require('../models/menuSeed');
+menuRouter.get('/seed', (req, res) => {
+    menu.deleteMany({}, (error, allmenu) => {});
 
-//     menu.create(menuSeed, (error, data) => {
-//         res.redirect('/menu');
-//     });
-// });
+    menu.create(menuSeed, (error, data) => {
+        res.redirect('/menu');
+    });
+});
 // =======================
 //       ROUTES
 // =======================

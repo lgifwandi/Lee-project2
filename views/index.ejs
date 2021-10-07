@@ -9,11 +9,8 @@
 </head>
 
 <body>
-	<nav>
-		<a href="/menu/new">Add a new Item</a>
-	</nav>
 
-	<h1>Shop</h1>
+	<h1>Food Menu</h1>
 	
 	<% menu.forEach(menu => { %>
 			
@@ -25,7 +22,11 @@
 		<p> Price :<%= menu.price %> </p>
 				
 		<% }) %>
-				
+
+        <nav>
+            <a href="/menu/new">Add a new Item</a>
+        </nav>
+    
 	
 </body>
 
