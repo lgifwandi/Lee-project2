@@ -1,5 +1,5 @@
 {
-  "name": "mongo_atlas_test",
+  "name": "lee-project2",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lgifwandi/mongo_atlas_test.git"
+    "url": "git+https://github.com/lgifwandi/Lee-project2.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/lgifwandi/mongo_atlas_test/issues"
+    "url": "https://github.com/lgifwandi/Lee-project2/issues"
   },
-  "homepage": "https://github.com/lgifwandi/mongo_atlas_test#readme",
+  "homepage": "https://github.com/lgifwandi/Lee-project2#readme",
   "dependencies": {
     "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
