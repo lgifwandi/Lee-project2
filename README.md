@@ -16,17 +16,16 @@ Technologies Used
 
 Screenshot
 -------------------------------------------------------------------------------
-![App!](images/App.jpg)
-![Wireframe!](images/Wireframe.jpg)
+![App!](images/app.jpeg)
 
 
 Getting Started
 -------------------------------------------------------------------------------
- [click here](https://vercel.com/nypdapi/project-one) to see the deployed app!
+ [click here](https://lee-project2.herokuapp.com/) to see the deployed app!
 
 Future Enhancements
 -------------------------------------------------------------------------------
-I want to be able to make the app display the complaints description when a user type in the number of recent complaints.
+I want to be able to use authentication,restrict access to certain features.
 
 
 
