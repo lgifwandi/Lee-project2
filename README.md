@@ -11,7 +11,7 @@ Technologies Used
 - CSS
 - JavaScript
 - Express
--mongodb
+- mongodb
 - Hosted on Heroku
 
 Screenshot
