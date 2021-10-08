@@ -23,6 +23,7 @@ menuRouter.get('/seed', (req, res) => {
 // Index
 menuRouter.get('/', (req, res) => {
     menu.find({}, (error, allmenu) => {
+        // console.log(allmenu)
         res.render('index.ejs', {
             menu: allmenu,
         });

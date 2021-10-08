@@ -4,19 +4,26 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Montserrat:300,400,700&display=swap"
+        rel="stylesheet"/>
+        <!-- ============= STYLES ============= -->
+        <link rel="stylesheet" href="/style.css" />
 		<title>Menu</title>
 	</head>
 	<body>
-		<h1>New Menu</h1>
-		<form action="/menu" method="POST">
+		<div class="container">
+
+		    <h1>New Item</h1>
+		    <form action="/menu" method="POST">
 			
-            name : <input type="text" name="name" /><br />
-			ingredient : <input type="text" name="ingredient" /><br />
-			img: <input type="link" name="img" /><br />
+             name : <input type="text" name="name" /><br />
+			 ingredient : <input type="text" name="ingredient" /><br />
+			 image: <input type="link" name="img" /><br />
+			 price: <input type="number" name="price" /><br />
 			
-			<input type="submit" name="" value="Add menu" />
-		
-		
-        </form>
+			 <input type="submit" name="" value="Add Item" />
+	
+             </form>
+	    </div>
 	</body>
 </html>

@@ -5,28 +5,37 @@
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ============= FONTS ============= -->
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Montserrat:300,400,700&display=swap"
+     rel="stylesheet"/>
+     <!-- ============= STYLES ============= -->
+     <link rel="stylesheet" href="/style.css" />
 	<title>Menu</title>
 </head>
 
 <body>
-
-	<h1>Food Menu</h1>
-	
-	<% menu.forEach(menu => { %>
-			
-			    
-		<p> <%= menu.name %> <p>
-				
-        <a href="/menu/<%= menu.id%>"> <img src=<%= menu.img %></a>
-				
-		<p> Price :<%= menu.price %> </p>
-				
-		<% }) %>
+    <div class="container">
 
         <nav>
             <a href="/menu/new">Add a new Item</a>
         </nav>
-    
+
+        <h1>Food Menu</h1>
+	<div class ="menuItemContainer">
+
+	    <% menu.forEach(menuItem => { %>
+		<div class="menuItem">	
+            <p><%= menuItem.name %><p>
+           
+            <a href="/menu/<%= menuItem.id%>"><img src=<%= menuItem.img %>/></a>
+
+        </div>  
+				
+				
+		<% }) %>
+    </div>
+      
+    </div>
 	
 </body>
 

@@ -1,0 +1,52 @@
+body {
+  background-image: url('https://imgur.com/Vgh1AXM.png');
+  background-size: cover;
+  }
+
+.container{
+  width: 100%;
+  height: 100%;
+  position: fixed; 
+  overflow: auto;
+  box-sizing: border-box; 
+}
+
+.menuItemContainer{
+  display:flex;
+  flex-wrap: wrap;
+
+}
+
+img {
+  width: 60%;
+  border-radius: 1em;
+}
+
+input[type="text"], input[type="number"], input[type="link"] {
+  width: 20%;
+  padding: 1em;
+  border: 0px;
+  border-radius: 0.5em;
+  box-shadow: 1px 1px 2px #ddd;
+  margin: 0.5em 0; 
+}
+input[type="submit"] {
+  width: 20%;
+  font-family: 'Montserrat';
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color:rgb(142, 89, 81);
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+  background: #eab676;
+}
+
+form strong {
+  text-transform: uppercase;
+  display: inline-block;
+  margin: 0.3em;
+  color: rgb(152, 130, 110);
+}
+

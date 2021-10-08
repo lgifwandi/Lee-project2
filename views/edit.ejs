@@ -5,19 +5,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Montserrat:300,400,700&display=swap"
+    rel="stylesheet"/>
+    <!-- ============= STYLES ============= -->
+    <link rel="stylesheet" href="/style.css" />
     <title>Menu</title>
 </head>
 
 <body>
-    <h1>Edit Menu</h1>
-    <form action="/menu/<%=menu._id%>?_method=PUT" method="POST">
+
+    <div class="container">
+        <h1>Edit Menu</h1>
+        <form action="/menu/<%=menu._id%>?_method=PUT" method="POST">
         
         name : <input type="text" name="name" value="<%=menu.name%>" /><br />
         ingredient : <input type="text" name="ingredient" value="<%=menu.ingredient%>" /><br />
-        img : <input type="link" name="img" value="<%=menu.img%>" /><br />       
+        image : <input type="link" name="img" value="<%=menu.img%>" /><br />    
+        price : <input type="number" name="price" value="<%=menu.price%>" /><br />     
         
-        <input type="submit" value="Submit Changes" />
-    </form>
+         <input type="submit" value="Submit Changes" />
+         </form>
+    </div>
 </body>
 
 </html>

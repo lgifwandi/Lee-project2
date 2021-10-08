@@ -1,19 +1,19 @@
 module.exports =[{
-    name: 'Beans',
-    img: 'https://imgur.com/LEHS8h3.png',
-    ingredient : 'A small pile of beans. Buy more beans for a big pile of beans.',
-    price: 5,
-  }, 
-  {
-    name: 'Bones',
-    img: 'https://imgur.com/dalOqwk.png',
-    ingredient: 'It\'s just a bag of bones.',
+    name: 'Swahili Basket',
+    img: 'https://imgur.com/Y7eoVYL.png',
+    ingredient : 'Combination of samosa, bhajia and sausage.',
     price: 25,
   }, 
   {
-    name: 'Bins',
-    img: 'https://imgur.com/ptWDPO1.png',
-    ingredient: 'A stack of colorful bins for your beans and bones.',
-    price: 7000,
+    name: 'Samaki Fillet',
+    img: 'https://imgur.com/XyLrlSX.png',
+    ingredient: 'Deep fried tilapia fillet chunks in a rich coconut curry, or sautéed with onions and cilantro.',
+    price: 35,
+  }, 
+  {
+    name: 'Kuku Choma',
+    img: 'https://imgur.com/zErlXYn.png',
+    ingredient: 'Grilled chicken breast marinated & char-grilled.',
+    price: 27,
   },
 ];
